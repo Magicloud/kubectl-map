@@ -1,0 +1,4 @@
+{
+    "git.enabled": false,
+    "nixEnvSelector.nixFile": "${workspaceFolder}/flake.nix"
+}

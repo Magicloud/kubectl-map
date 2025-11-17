@@ -1,0 +1,22 @@
+[package]
+name = "kubectl-map"
+version = "2025.11.17"
+edition = "2024"
+
+[profile.release]
+strip = true
+lto = true
+codegen-units = 1
+opt-level = "z"
+panic = "abort"
+
+[dependencies]
+eyre = { version = "*" }
+color-eyre = { version = "*" }
+clap = { version = "*", features = ["derive"] }
+smol = { version = "*" }
+async-compat = { version = "*" }
+k8s-openapi = { version = "*", features = ["earliest"] }
+kube = { version = "*" }
+jsonpath-rust = { version = "*" }
+serde_json = { version = "*" }
